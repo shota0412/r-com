@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show]
   def index
-    @tweet = Tweet.all.order('created_at DESC')
+    @tweets = Tweet.includes(:user)
   end
 
   def new
