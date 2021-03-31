@@ -10,7 +10,7 @@
               <%= tweet.text%>
           </h5>
           
-          <h6 class="card-subtitle mb-2 text-muted"><%= simple_format tweet.text %></h6>
+          <h6 class="card-subtitle mb-2 text-muted"><%= simple_format tweet.user.username %></h6>
           <%= attachment_image_tag @tweet, :image %>
           <% end %>
         </div>
